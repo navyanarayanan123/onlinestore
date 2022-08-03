@@ -1,0 +1,21 @@
+{%extends 'base.html'%}
+{%block body_block%}
+<div class="row">
+    <div class="col-2"></div>
+    <div class="col-8">
+        <div class="card" style="width: 18rem;">
+            <img src="{{book.image.url}}" class="card-img-top" alt="..." height="350px">
+            <div class="card-body">
+                <h5 class="card-title">Book Name:{{book.book_name}}</h5>
+                <p class="card-text">Author:{{book.author}}</p>
+                <p class="card-text">Price:{{book.price}}</p>
+                <p class="card-text">Copies:{{book.copies}}</p>
+                <p class="card-text">Published Date:{{book.published_date}}</p>
+                <a class="btn btn-primary" href="{%url 'index'%}">Home</a>
+
+            </div>
+        </div>
+    </div>
+    <div class="col-2"></div>
+</div>
+{%endblock%}

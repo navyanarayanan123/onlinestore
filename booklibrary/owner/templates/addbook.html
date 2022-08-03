@@ -1,0 +1,20 @@
+{%extends 'base.html'%}
+{%block body_block%}
+<div class="row">
+    <div class="col-4"></div>
+    <div class="col-4">
+        <h1 style="color:red">Add book</h1>
+    </div>
+    <div class="col-4"></div>
+</div>
+<div class="row">
+    <div class="col-10"></div>
+    <div class="col-4">
+        <form action="" method="post" enctype="multipart/form-data">
+            {%csrf_token%}
+            {{form.as_p}}
+            <input type="submit" value="add">
+        </form>
+    </div>
+</div>
+{%endblock%}
